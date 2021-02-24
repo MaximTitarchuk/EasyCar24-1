@@ -1,0 +1,111 @@
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+    margin-bottom: 5px;
+}
+
+
+/* buttons */
+.btn-back {
+    color: #FFF;
+    background-color: #AAA;
+    border-color: #999;
+}
+.btn-back:hover{
+    color: #FFF;
+    background-color: #999;
+    border-color: #777;
+}
+
+label.control-label {
+    margin-top: 6px;
+}
+
+/* breadcrumbs */
+.breadcrumbCustom { 
+        list-style: none; 
+        overflow: hidden; 
+        margin: 0;
+        padding: 0;
+}
+.breadcrumbCustom li { 
+        float: left; 
+}
+.breadcrumbCustom li a {
+        color: white;
+        text-decoration: none; 
+        padding: 5px 0 5px 50px;
+        background: #a00;                   /* fallback color */
+        background: rgb(50,50,50); 
+        position: relative; 
+        display: block;
+        float: left;
+}
+.breadcrumbCustom li a:after { 
+        content: " "; 
+        display: block; 
+        width: 0; 
+        height: 0;
+        border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid rgb(50,50,50);
+        position: absolute;
+        top: 50%;
+        margin-top: -50px; 
+        left: 100%;
+        z-index: 5; 
+}	
+.breadcrumbCustom li a:before { 
+        content: " "; 
+        display: block; 
+        width: 0; 
+        height: 0;
+        border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+        border-bottom: 50px solid transparent;
+        border-left: 30px solid white;
+        position: absolute;
+        top: 50%;
+        margin-top: -50px; 
+        margin-left: 1px;
+        left: 100%;
+        z-index: 1; 
+}
+.breadcrumbCustom li.top a {
+        padding-left: 10px;
+        z-index: 5;
+}
+.breadcrumbCustom li:nth-child(1) a 	{ padding-left: 10px;}
+
+.breadcrumbCustom li:nth-child(2) a       { background:        rgb(100,100,100); z-index: 4; }
+.breadcrumbCustom li:nth-child(2) a:after { border-left-color: rgb(100,100,100); z-index: 4; }
+.breadcrumbCustom li:nth-child(3) a       { background:        rgb(125,125,125); z-index: 3; }
+.breadcrumbCustom li:nth-child(3) a:after { border-left-color: rgb(125,125,125); z-index: 3; }
+.breadcrumbCustom li:nth-child(4) a       { background:        rgb(150,150,150); z-index: 2; }
+.breadcrumbCustom li:nth-child(4) a:after { border-left-color: rgb(150,150,150); z-index: 2; }
+.breadcrumbCustom li:nth-child(5) a       { background:        rgb(175,175,175); z-index: 1; }
+.breadcrumbCustom li:nth-child(5) a:after { border-left-color: rgb(175,175,175); z-index: 1; }
+
+.breadcrumbCustom li a:hover { background: rgb(70,70,70); }
+.breadcrumbCustom li a:hover:after { border-left-color: rgb(70,70,70) !important; }
+
+.exitBtn, .messagesBtn, .messagesLink {
+  color: #39ff14 !important;
+  font-weight: bold  !important;
+  cursor: pointer !important;
+}
+
+.updateMyData {
+  color: #39ff14 !important;
+  font-weight: bold  !important;
+  cursor: pointer !important;
+}
+
+.messagesLink .badge {
+  background-color: #39ff14 !important;
+  color: #000;
+  font-weight: bold  !important;
+}

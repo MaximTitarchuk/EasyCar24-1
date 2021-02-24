@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test user password recovery</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+
+        <style>
+            html, body {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                display: table;
+                font-weight: 100;
+                font-family: 'Lato';
+            }
+
+            .container {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .content {
+                text-align: center;
+                display: inline-block;
+            }
+
+
+
+        </style>
+
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <script src="/js/jquery.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/moment.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <form method="post" action="/api/v1/payments/payment">
+                    <div class="row">
+			<input type="hidden" name="response_type" value="code" />
+
+                        <div class="col-lg-12">
+                            <label>client_id</label>
+                            <input type="text" class="form-control" name="client_id" value="{{ config("payment.id") }}" />
+                        </div>
+                        <div class="col-lg-12">
+                            <label>card_number</label>
+                            <input type="text" class="form-control" name="card_number" value="1234567890123456" />
+                        </div>
+                        <div class="col-lg-12">
+                            <label>card_holder</label>
+                            <input type="text" class="form-control" name="card_holder" value="IVAN IVANOV" />
+                        </div>
+                        <div class="col-lg-12">
+                            <label>card_expiry</label>
+                            <input type="text" class="form-control" name="card_expiry" value="10/16" />
+                        </div>
+                        <div class="col-lg-12">
+                            <label>card_cvv</label>
+                            <input type="text" class="form-control" name="card_cvv" value="" />
+                        </div>
+                        <div class="col-lg-12">
+                            <label>iat</label>
+                            <input type="text" class="form-control" name="iat" value="{{ Carbon\Carbon::now()->timestamp }}" />
+                        </div>
+
+
+                        <div class="col-lg-12" style="margin-top: 5px">
+                            <input type="submit" class="btn btn-success" value="Оправить" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
